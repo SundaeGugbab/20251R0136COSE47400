@@ -10,11 +10,11 @@ from shapely.geometry import shape # To convert raw Geometry data
 # Make sure to set this environment variable before running the script:
 # On Windows (CMD): set COPERNICUS_USERNAME=your_email@example.com
 # On Linux/macOS (Bash/Zsh): export COPERNICUS_USERNAME=your_email@example.com
-copernicus_user = os.getenv("COPERNICUS_USERNAME")
+copernicus_user = "jeonjangwon0709@gmail.com"
 # Copernicus User Password from environment variable
 # On Windows (CMD): set COPERNICUS_PASSWORD=your_password
 # On Linux/macOS (Bash/Zsh): export COPERNICUS_PASSWORD=your_password
-copernicus_password = os.getenv("COPERNICUS_PASSWORD")
+copernicus_password = "Wjswkddnjs:0709"
 
 # WKT Representation of BBOX of AOI (Area of Interest)
 # This polygon covers the Uiseong-Andong area in Gyeongbuk, South Korea.
@@ -25,15 +25,15 @@ data_collection = "SENTINEL-2"
 # Define the fire period for Uiseong wildfire (based on provided information)
 # Wildfire start date: March 22, 2025
 # Wildfire end date: March 28, 2025
-wildfire_start_date = date(2025, 3, 22)
-wildfire_end_date = date(2025, 3, 28)
+wildfire_start_date = date(2024, 6, 20)
+wildfire_end_date = date(2024, 6, 20)
 
 # Calculate data collection start date (2 days before wildfire start)
-collection_start_date = wildfire_start_date - timedelta(days=2)
+collection_start_date = wildfire_start_date - timedelta(days=10)
 collection_start_date_string = collection_start_date.strftime("%Y-%m-%d")
 
 # Calculate data collection end date (2 days after wildfire end)
-collection_end_date = wildfire_end_date + timedelta(days=2)
+collection_end_date = wildfire_end_date + timedelta(days=10)
 collection_end_date_string = collection_end_date.strftime("%Y-%m-%d")
 
 # Define directory to save downloaded Sentinel data
