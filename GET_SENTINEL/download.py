@@ -25,8 +25,8 @@ data_collection = "SENTINEL-2"
 # Define the fire period for Uiseong wildfire (based on provided information)
 # Wildfire start date: March 22, 2025
 # Wildfire end date: March 28, 2025
-wildfire_start_date = date(2024, 6, 20)
-wildfire_end_date = date(2024, 6, 20)
+wildfire_start_date = date(2024, 12, 20)
+wildfire_end_date = date(2024, 12, 20)
 
 # Calculate data collection start date (2 days before wildfire start)
 collection_start_date = wildfire_start_date - timedelta(days=10)
